@@ -1,0 +1,33 @@
+.events-grid-1 {
+  display: grid;
+  grid-gap: $grid-gap;
+  grid-template-columns: [start] 1fr 1fr 1fr [end];
+  grid-template-areas:
+    "none none none"
+    "premium premium premium";
+
+  @media screen and (max-width: $tablet) {
+    grid-template-columns: [start] 1fr 1fr [end];
+
+    grid-template-areas:
+      "premium premium"
+      "none none"
+      "none none";
+  }
+
+  @media screen and (max-width: $mobile-portrait) {
+    grid-template-columns: [start] 1fr [end];
+    grid-template-areas:
+      "premium"
+      "none"
+      "none";
+  }
+}
+
+.events--premium {
+  grid-area: premium;
+}
+
+.events--span-100 {
+  grid-column: start/span end;
+}

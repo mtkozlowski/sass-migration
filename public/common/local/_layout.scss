@@ -1,0 +1,17 @@
+body {
+  background-color: $bgColor;
+  color: $textColor;
+}
+
+.events-grid-1 {
+  // Temp
+  width: 1280px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  & > div {
+    background-color: #fab;
+    height: 400px;
+  }
+  // end temp
+}
