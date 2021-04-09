@@ -1,3 +1,5 @@
+@use "../config" as *;
+
 body {
   background-color: $bgColor;
   color: $textColor;

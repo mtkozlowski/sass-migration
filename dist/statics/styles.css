@@ -1,31 +1,20 @@
-.events-grid-1 {
-  display: grid;
-  grid-gap: 21px;
-  grid-template-columns: [start] 1fr 1fr 1fr [end];
-  grid-template-areas: "none none none" "premium premium premium"; }
-  @media screen and (max-width: 991px) {
-    .events-grid-1 {
-      grid-template-columns: [start] 1fr 1fr [end];
-      grid-template-areas: "premium premium" "none none" "none none"; } }
-  @media screen and (max-width: 478px) {
-    .events-grid-1 {
-      grid-template-columns: [start] 1fr [end];
-      grid-template-areas: "premium" "none" "none"; } }
+/* Error: Two forwarded modules both define a variable named $bgColor.
+ *   ,
+ * 1 | @forward "abstracts/colors";
+ *   | =========================== original @forward
+ * 2 | @forward "../common/config";
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^ new @forward
+ *   '
+ *   public\customerA\_config.scss 2:1  @use
+ *   public\customerA\index.scss 1:1    root stylesheet */
 
-.events--premium {
-  grid-area: premium; }
-
-.events--span-100 {
-  grid-column: start/span end; }
-
-body {
-  background-color: #fea;
-  color: #111; }
-
-.events-grid-1 {
-  width: 1280px;
-  max-width: 100%;
-  margin: 0 auto; }
-  .events-grid-1 > div {
-    background-color: #fab;
-    height: 400px; }
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Two forwarded modules both define a variable named $bgColor.\a   \2577 \a 1 \2502  @forward "abstracts/colors";\d\a   \2502  \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  original @forward\a 2 \2502  @forward "../common/config";\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^ new @forward\a   \2575 \a   public\\customerA\\_config.scss 2:1  @use\a   public\\customerA\\index.scss 1:1    root stylesheet';
+}

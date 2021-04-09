@@ -1,4 +1,2 @@
-@import "variables";
-@import "abstracts/index";
-@import "templates/events-grid";
-@import "local/layout";
+@use "config";
+@forward "local";
